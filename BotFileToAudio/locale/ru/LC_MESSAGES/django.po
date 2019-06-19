@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-19 18:03+0300\n"
+"PO-Revision-Date: 2019-06-19 18:02+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
+"100>=11 && n%100<=14)? 2 : 3);\n"
+"Language: ru\n"
+"X-Generator: Poedit 1.8.1\n"
+
+#: .\BotFileToAudio.py:18
+msgid ""
+"This bot creates, if possible, messages of type \"audio\" based on new files "
+"attached to your chats.\n"
+"You need to add the bot to it as an administrator with the \"Read all "
+"messages\" permission.\n"
+"To open the menu, type /menu."
+msgstr ""
+"Этот бот создаёт, если возможно, сообщения с типом \"аудио\" на основе новых "
+"файлов, прикрепляемым в ваших чатах.\n"
+"Вам нужно добавить бота в качестве администратора с разрешением «Читать все "
+"сообщения».\n"
+"Чтобы открыть меню, введите /menu."
+
+#: .\BotFileToAudio.py:26
+msgid "About bot"
+msgstr "О боте"
+
+#: .\BotFileToAudio.py:28
+msgid "Message to the developer"
+msgstr "Сообщение разработчику"
+
+#: .\BotFileToAudio.py:29
+msgid "Chat to discuss the bot"
+msgstr "Чат по работе с ботом"

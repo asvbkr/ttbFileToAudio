@@ -48,7 +48,7 @@ coverage.xml
 .pytest_cache/
 
 # Translations
-*.mo
+# *.mo
 *.pot
 
 # Django stuff:
@@ -104,4 +104,3 @@ venv.bak/
 .mypy_cache/
 
 /.idea
-ttb.sqlite3
