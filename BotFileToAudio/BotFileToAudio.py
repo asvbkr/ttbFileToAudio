@@ -16,7 +16,7 @@ class BotFileToAudio(TamTamBot):
     def about(self):
         # type: () -> str
         return _('This bot creates, if possible, messages of type "audio" based on new files attached to your chats.\n'
-                 'You need to add the bot to it as an administrator with the "Read all messages" permission.\n'
+                 'You need to add the bot to it as an administrator with the "Read all messages" and "Write, edit and delete messages" permissions.\n'
                  'To open the menu, type /menu.')
 
     @property
