@@ -6,11 +6,12 @@ import requests
 from TamTamBot import UpdateCmn
 from TamTamBot.TamTamBot import TamTamBot
 from TamTamBot.utils.lng import get_text as _, set_use_django
+from TamTamBotDj.TamTamBotDj import TamTamBotDj
 from openapi_client import NewMessageBody, UploadType, FileAttachment, NewMessageLink, MessageLinkType, MessageCreatedUpdate, CallbackButton, LinkButton, RequestContactButton, \
     RequestGeoLocationButton, Intent
 
 
-class BotFileToAudio(TamTamBot):
+class BotFileToAudio(TamTamBotDj):
 
     @property
     def about(self):
