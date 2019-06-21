@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+from django.utils.timezone import now
+
 from TamTamBot import UpdateCmn
 from TamTamBot.TamTamBot import TamTamBot
 from djh_app.models import TtbUser, TtbPrevStep
@@ -41,7 +43,7 @@ class TamTamBotDj(TamTamBot):
             b_obj = self.serialize_update(update)
             ttb_user, created = TtbUser.update_or_create_by_update(UpdateCmn(update))
             if isinstance(ttb_user, TtbUser):
-                TtbPrevStep.objects.update_or_create(user=ttb_user, index=index, defaults={'update': b_obj})
+                TtbPrevStep.objects.update_or_create(user=ttb_user, index=index, defaults={'update': b_obj, 'updated': now()})
 
     def prev_step_exists(self, index):
         # type: (str) -> bool

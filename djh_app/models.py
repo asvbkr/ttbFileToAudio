@@ -64,3 +64,4 @@ class TtbPrevStep(models.Model):
     index = models.CharField(max_length=64, unique=True, null=False, verbose_name='index')
     update = models.TextField(unique=False, null=False, verbose_name='user update')
     user = models.ForeignKey(TtbUser, unique=False, on_delete=models.CASCADE, verbose_name='user')
+    updated = models.DateTimeField(auto_now_add=True, null=True, verbose_name='updated')
