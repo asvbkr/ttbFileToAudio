@@ -31,7 +31,10 @@ class UpdateCmn(object):
             self.cmd = update.callback.payload
             self.link = None
 
-            payload = json.loads(update.callback.payload)
+            try:
+                payload = json.loads(update.callback.payload)
+            except json.decoder.JSONDecodeError:
+                payload = None
             if isinstance(payload, dict):
                 self.cmd_bot = payload.get('bot')
                 self.cmd = payload.get('cmd')
