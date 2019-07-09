@@ -28,7 +28,7 @@ class BotFileToAudio(TamTamBotDj):
             [LinkButton(_('Chat to discuss the bot'), 'https://tt.me/FileToAudioChat')],
         ]
         if len(self.languages_dict) > 1:
-            buttons.append([CallbackButton('Изменить язык / set language', '/set_language', Intent.DEFAULT)])
+            buttons.append([CallbackButtonCmd('Изменить язык / set language', 'set_language', intent=Intent.DEFAULT)])
 
         return buttons
 
