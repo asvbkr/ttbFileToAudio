@@ -65,14 +65,14 @@ class BotFileToAudio(TamTamBotDj):
                 if isinstance(attachment, FileAttachment):
                     self.lgz.debug('(%s).' % attachment)
                     url = attachment.payload.url
-                    name = url
+                    name = attachment.filename
                     names.append(name)
                     r = requests.get(url)
                     if r.status_code == 200:
                         ats.extend(self.attach_contents([(r.content, UploadType.AUDIO)]))
             if ats:
                 mb = NewMessageBody(attachments=ats, link=NewMessageLink(MessageLinkType.REPLY, update.message.body.mid))
-                # mb.text = '; '.join(names)
+                mb.text = '; '.join(names)
                 try:
                     self.send_message(mb, chat_id=update.chat_id)
                 except Exception as e:
