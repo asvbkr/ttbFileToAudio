@@ -87,9 +87,12 @@ class BotFileToAudio(TamTamBotDj):
                     self.lgz.debug(f'it\'s all right!')
                     if delete_source:
                         self.lgz.debug(f'try delete source with id={update.message.body.mid}')
-                        res_d=self.msg.delete_message(update.message.body.mid)
-                        if isinstance(res_d, SimpleQueryResult):
-                            self.lgz.debug(f'result delete source with id={update.message.body.mid}: {res_d.success}-{res_d.message}')
+                        try:
+                            res_d = self.msg.delete_message(update.message.body.mid)
+                            if isinstance(res_d, SimpleQueryResult):
+                                self.lgz.debug(f'result delete source with id={update.message.body.mid}: {res_d.success}-{res_d.message}')
+                        except Exception as e:
+                            self.lgz.warning(e)
 
     @property
     def token(self):
