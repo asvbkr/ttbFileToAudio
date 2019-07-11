@@ -55,6 +55,8 @@ class BotFileToAudio(TamTamBotDj):
         if res is not None:
             return res
 
+        create_link = False
+        delete_source = True
         update = UpdateCmn(update)
         if update and update.message and update.message.body:
             update.message.body.attachments = update.message.body.attachments or []
@@ -71,12 +73,19 @@ class BotFileToAudio(TamTamBotDj):
                     if r.status_code == 200:
                         ats.extend(self.attach_contents([(r.content, UploadType.AUDIO)]))
             if ats:
-                mb = NewMessageBody(attachments=ats, link=NewMessageLink(MessageLinkType.REPLY, update.message.body.mid))
+                if create_link:
+                    link = NewMessageLink(MessageLinkType.REPLY, update.message.body.mid)
+                else:
+                    link = None
+                mb = NewMessageBody(attachments=ats, link=link)
                 mb.text = '; '.join(names)
                 try:
                     self.send_message(mb, chat_id=update.chat_id)
                 except Exception as e:
                     self.lgz.warning(e)
+                else:
+                    if delete_source:
+                        self.msg.delete_message(update.message.body.mid)
 
     @property
     def token(self):
