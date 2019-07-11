@@ -37,7 +37,7 @@ class FileAttachmentPayload(AttachmentPayload):
     }
 
     attribute_map = {
-        'url': 'str',
+        'url': 'url',
         'token': 'token'
     }
 
