@@ -1,0 +1,6 @@
+[submodule "TamTamBot"]
+	path = TamTamBot
+	url = git@github.com:asvbkr/TamTamBot.git
+[submodule "openapi_client"]
+	path = openapi_client
+	url = git@github.com:asvbkr/openapi_client.git
