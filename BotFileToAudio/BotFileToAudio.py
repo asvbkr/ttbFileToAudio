@@ -6,7 +6,7 @@ import requests
 from TamTamBot import UpdateCmn, CallbackButtonCmd
 from TamTamBot.utils.lng import get_text as _, set_use_django
 from TamTamBotDj.TamTamBotDj import TamTamBotDj
-from openapi_client import NewMessageBody, UploadType, FileAttachment, NewMessageLink, MessageLinkType, MessageCreatedUpdate, CallbackButton, LinkButton, Intent, BotCommand, SimpleQueryResult
+from openapi_client import NewMessageBody, UploadType, FileAttachment, NewMessageLink, MessageLinkType, MessageCreatedUpdate, LinkButton, Intent, BotCommand, SimpleQueryResult
 
 
 class BotFileToAudio(TamTamBotDj):
@@ -35,9 +35,9 @@ class BotFileToAudio(TamTamBotDj):
     @property
     def description(self):
         # type: () -> str
-        return 'Этот бот создаёт, по возможности, сообщения с типом "аудио" на основе новых файлов, прикрепляемым в ваших чатах.' \
+        return 'Этот бот создаёт, по возможности, сообщения с типом "аудио" на основе новых файлов, прикрепляемым в ваших чатах. ' \
                'Вам нужно добавить бота в качестве администратора с разрешениями «Читать сообщения» и "Писать, редактировать и удалять сообщения".\n\n' \
-               'This bot creates, if possible, messages of type "audio" based on new files attached to your chats.' \
+               'This bot creates, if possible, messages of type "audio" based on new files attached to your chats. ' \
                'You need to add the bot to it as an administrator with the "Read all messages" and "Write, edit and delete messages" permissions.'
 
     def get_commands(self):
