@@ -6,7 +6,7 @@ import requests
 from TamTamBot import UpdateCmn, CallbackButtonCmd
 from TamTamBot.utils.lng import get_text as _, set_use_django
 from TamTamBotDj.TamTamBotDj import TamTamBotDj
-from openapi_client import NewMessageBody, UploadType, FileAttachment, NewMessageLink, MessageLinkType, MessageCreatedUpdate, LinkButton, Intent, BotCommand, SimpleQueryResult
+from openapi_client import NewMessageBody, UploadType, FileAttachment, NewMessageLink, MessageLinkType, LinkButton, Intent, BotCommand, SimpleQueryResult
 
 
 class BotFileToAudio(TamTamBotDj):
@@ -49,15 +49,10 @@ class BotFileToAudio(TamTamBotDj):
         ]
         return commands
 
-    def handle_message_created_update(self, update):
-        # type: (MessageCreatedUpdate) -> bool
-        res = super().handle_message_created_update(update)
-        if res is not None:
-            return res
-
+    def receive_text(self, update):
+        # type: (UpdateCmn) -> bool
         create_link = False
         delete_source = True
-        update = UpdateCmn(update)
         if update and update.message and update.message.body:
             update.message.body.attachments = update.message.body.attachments or []
             ats = []
@@ -93,6 +88,7 @@ class BotFileToAudio(TamTamBotDj):
                                 self.lgz.debug(f'result delete source with id={update.message.body.mid}: {res_d.success}-{res_d.message}')
                         except Exception as e:
                             self.lgz.warning(e)
+        return True
 
     @property
     def token(self):
