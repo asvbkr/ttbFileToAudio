@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-29 19:02+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\TamTamBotDj.py:149
+#, python-format
+msgid ""
+"The bot %(bot_name)s cannot be added to %(chat_name)s, because it cannot "
+"work correctly under the current environment (rights, chat type, etc.)."
+msgstr ""
+
+#: .\TamTamBotDj.py:192
+#, python-format
+msgid "Current user (%s) not found."
+msgstr ""
+
+#: .\TamTamBotDj.py:321
+msgid "Cache recreated."
+msgstr ""
+
+#: .\TamTamBotDj.py:324
+#, python-format
+msgid "Error recreate cache.%s"
+msgstr ""
+
+#: .\TamTamBotDj.py:351
+msgid "Select chat to attach/detach your subscription:"
+msgstr ""
+
+#: .\TamTamBotDj.py:368
+msgid "Text response is not provided"
+msgstr ""
