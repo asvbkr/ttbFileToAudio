@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "djh_app",
+    "file_to_audio_app",
 ]
 
 MIDDLEWARE = [
@@ -122,6 +123,7 @@ STATIC_URL = "/static/"
 django_heroku.settings(locals())
 
 LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'file_to_audio', 'locale'),
     os.path.join(BASE_DIR, 'TtBot', 'locale'),
     os.path.join(BASE_DIR, 'TamTamBot', 'locale'),
     os.path.join(BASE_DIR, 'TamTamBotDj', 'locale'),
