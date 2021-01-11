@@ -66,7 +66,7 @@ class TtbFileToAudio(TamTamBotDj):
             if user_id:
                 pass
             ap = chat_ext.admin_permissions.get(self.user_id)
-            return ap and ChatAdminPermission.WRITE in ap and ChatAdminPermission.READ_ALL_MESSAGES in ap
+            return chat_ext.chat.type in [ChatType.CHAT, ChatType.CHANNEL] and ap and ChatAdminPermission.WRITE in ap and ChatAdminPermission.READ_ALL_MESSAGES in ap
 
     def cmd_handler_view_chats_available(self, update):
         # type: (UpdateCmn) -> bool
