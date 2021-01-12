@@ -22,6 +22,7 @@ class TtbFileToAudio(TamTamBotDj):
         return 'Этот бот создаёт (при возможности) сообщения с типом "аудио" на основе новых файлов, прикрепляемых в ваших чатах. ' \
                'Вам нужно добавить бота в качестве администратора с разрешениями «Читать сообщения» и "Писать, редактировать и удалять сообщения".\n' \
                'Чтобы открыть меню, введите /menu.\n\n' \
+               'Исходники / Sources: https://github.com/asvbkr/ttbFileToAudio\n\n' \
                'This bot creates, if possible, messages of type "audio" based on new files attached to your chats. ' \
                'You need to add the bot to it as an administrator with the "Read all messages" and "Write, edit and delete messages" permissions.\n' \
                'To open the menu, type /menu.'
